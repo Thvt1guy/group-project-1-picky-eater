@@ -23,6 +23,6 @@ SO THAT I can order/retrieve my food
 - Must have 10 commits
   ## Group Roles
   - HTML/CSS - Samantha Cage 
-  - Restuarant API- Derrick Alcius
+  - Restaurant API- Derrick Alcius
   - Left side data- Anthony Pontecorvo 
   - Google Maps API- Javed Nabira
