@@ -5,8 +5,13 @@ const options = {
 		'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
 	}
 };
-
 fetch('https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/zipcode/90210/0', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
+
+	// if (response.ok){
+	// 	console.log('SUCCESS');
+	// } else{
+	// 	console.log('NOT SUCCESSFUL');
+	// }
