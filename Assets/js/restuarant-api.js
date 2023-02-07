@@ -50,13 +50,20 @@ var writeRestData = function (data) {
 	}
 }
 
+var restResultContainer = document.querySelector('.rest-result');
+
+restResultContainer.addEventListener('click', function(event){
+if (event.target.contains(restResultContainer)){
+	console.log(event.target);
+}
+})
 
 //add event listener to rest result container
 //for function of the click event 
-//check to see if the targety of what was clicked ie event.target has the rest-result class
+//check to see if the target of what was clicked ie event.target has the rest-result class
 //if true console log event.target
 //console log the event.target data lat and long attributes
-// add code to update map based on those long and lat
+//add code to update map based on those long and lat
 
 
 
