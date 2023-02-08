@@ -2,6 +2,8 @@ var zipInputEl = document.querySelector('#zipcodeInput');
 var searchForm = document.querySelector('#zipsearchform');
 var searchBTN = document.querySelector('.button-primary');
 var RestList = document.querySelector('#dinnerChoices');
+var latitude;
+var longitude;
 
 
 var submissionHandler = function (event) {
@@ -42,7 +44,7 @@ var writeRestData = function (data) {
 	for (var i = 0; i < data.restaurants.length; i++) {
 		html +=
 			`
-			<h3 class = "rest-result" data-latitude = ${data.restaurants[i].latitude} data-longitude = ${data.restaurants[i].longitude}>${data.restaurants[i].restaurantName}</h3>
+			<h3 class = "rest-result" data-latitude=${data.restaurants[i].latitude} data-longitude=${data.restaurants[i].longitude}>${data.restaurants[i].restaurantName}</h3>
 			`
 
 		RestList.innerHTML = html;
@@ -50,13 +52,26 @@ var writeRestData = function (data) {
 	}
 }
 
-var restResultContainer = document.querySelector('.rest-result');
+var restResultContainer = document.querySelector('.rest-result-list');
 
-restResultContainer.addEventListener('click', function(event){
-if (event.target.contains(restResultContainer)){
-	console.log(event.target);
+
+
+
+function locData(event){
+	if (event.target.classList.contains('rest-result')){
+		console.log(event.target);
+		console.log(event.target.getAttribute('data-latitude'));
+		console.log(event.target.getAttribute('data-longitude'));
+
+		latitude = event.target.getAttribute('data-latitude');
+		longitude = event.target.getAttribute('data-longitude');
+	}
+	
+
+	// console.log(event.target.classList.contains('rest-result'));
+	// console.log(event.target.getAttribute('data-latitude'));
+	// console.log(event.target.data.longitude);
 }
-})
 
 //add event listener to rest result container
 //for function of the click event 
@@ -67,6 +82,7 @@ if (event.target.contains(restResultContainer)){
 
 
 
+restResultContainer.addEventListener('click', locData);
 searchForm.addEventListener("submit", submissionHandler);
 
 
