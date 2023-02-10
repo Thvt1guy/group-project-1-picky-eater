@@ -2,14 +2,14 @@ var zipInputEl = document.querySelector('#zipcodeInput');
 var searchForm = document.querySelector('#zipsearchform');
 var searchBTN = document.querySelector('.button-primary');
 var RestList = document.querySelector('#dinnerChoices');
-var latitude;
-var longitude;
+var latitude = 48.8584;
+var longitude = 2.2945;
 
 
 var submissionHandler = function (event) {
 	event.preventDefault();
 	var zip = zipInputEl.value.trim();
-	console.log(zip);
+	// console.log(zip);
 	getUserRest(zip);
 }
 
@@ -19,7 +19,7 @@ var getUserRest = function (zipcode) {
 		.then(function (response) {
 			if (response.ok) {
 				response.json().then(function (data) {
-					console.log(data);
+					// console.log(data);
 					writeRestData(data);
 				})
 			} else {
@@ -37,8 +37,8 @@ const options = {
 };
 
 var writeRestData = function (data) {
-	console.log(data);
-	console.log(data.restaurants.length);
+	// console.log(data);
+	// console.log(data.restaurants.length);
 	var html = "";
 
 	for (var i = 0; i < data.restaurants.length; i++) {
@@ -46,6 +46,7 @@ var writeRestData = function (data) {
 			`
 			<h5 class = "rest-result" data-latitude=${data.restaurants[i].latitude} data-longitude=${data.restaurants[i].longitude}>${data.restaurants[i].restaurantName}</h5>
 			`
+			// console.log(typeof data.restaurants[i].longitude);
 
 		RestList.innerHTML = html;
 
@@ -59,12 +60,13 @@ var restResultContainer = document.querySelector('.rest-result-list');
 
 function locData(event){
 	if (event.target.classList.contains('rest-result')){
-		console.log(event.target);
-		console.log(event.target.getAttribute('data-latitude'));
-		console.log(event.target.getAttribute('data-longitude'));
+		// console.log(event.target);
+		// console.log(event.target.getAttribute('data-latitude'));
+		// console.log(event.target.getAttribute('data-longitude'));
 
 		latitude = event.target.getAttribute('data-latitude');
 		longitude = event.target.getAttribute('data-longitude');
+		document.querySelector('#map').innerHTML = addingMap(longitude, latitude);
 	}
 	
 
