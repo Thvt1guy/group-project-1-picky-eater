@@ -44,7 +44,7 @@ var writeRestData = function (data) {
 	for (var i = 0; i < data.restaurants.length; i++) {
 		html +=
 			`
-			<h3 class = "rest-result" data-latitude=${data.restaurants[i].latitude} data-longitude=${data.restaurants[i].longitude}>${data.restaurants[i].restaurantName}</h3>
+			<h5 class = "rest-result" data-latitude=${data.restaurants[i].latitude} data-longitude=${data.restaurants[i].longitude}>${data.restaurants[i].restaurantName}</h5>
 			`
 
 		RestList.innerHTML = html;
