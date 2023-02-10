@@ -1,17 +1,60 @@
+Style.css
+
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-header{
-    background-image: url("../images/fooditems.webp");
-    background-color: #cccccc;
+h5{
+    margin-left: 20px;
+}
+
+input{
+    font-size: larger;
+}
+
+body{
+
+    background-color: whitesmoke;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    background-position: relative;
   }
 
-  body{
-    margin: 0;
-    
-
+header{
+    background-image: url("../images/fooditems.webp");
+    background-color: white;
+    border: solid;
+    border-color: orange;
+    border-radius: 10px;
   }
 
+#dinnerChoices{
+    background-color: white;
+    border-style: solid;
+    border-color: red;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+#map{
+    background-color: white;
+    border-style: solid;
+    border-color: red;
+    border-radius: 10px;
+  }
+
+.image-container {
+    max-width: 455px;
+    min-height: 455px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-container {
+    text-align: center;
+    border: solid;
+    border-color: orange;
+    border-radius: 10px;
+}
