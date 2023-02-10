@@ -2,9 +2,10 @@ var zipInputEl = document.querySelector('#zipcodeInput');
 var searchForm = document.querySelector('#zipsearchform');
 var searchBTN = document.querySelector('.button-primary');
 var RestList = document.querySelector('#dinnerChoices');
-var latitude;
-var longitude;
-
+var latitude = '37.9858';
+var longitude = '-122.4547';
+var pinLatitude;
+var pinLongitude;
 
 var submissionHandler = function (event) {
 	event.preventDefault();
@@ -55,23 +56,34 @@ var writeRestData = function (data) {
 var restResultContainer = document.querySelector('.rest-result-list');
 
 
+function addMap() {
+	mapDiv = document.createElement('div')
+	mapDiv.innerHTML = `<img src= "https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/${longitude},${latitude},15.02,0/300x200?access_token=pk.eyJ1IjoiYW50cG9udCIsImEiOiJjbGR1eDRjeHkwMXpiM3BwZ2hlYjcwOHpnIn0.M4sVNfG-Gzfup4Gpspmprw" >`
+	document.body.appendChild(mapDiv)
+	console.log(mapDiv)
+}
 
+addMap()
 
-function locData(event){
-	if (event.target.classList.contains('rest-result')){
+function locData(event) {
+	if (event.target.classList.contains('rest-result')) {
 		console.log(event.target);
 		console.log(event.target.getAttribute('data-latitude'));
 		console.log(event.target.getAttribute('data-longitude'));
 
 		latitude = event.target.getAttribute('data-latitude');
 		longitude = event.target.getAttribute('data-longitude');
+		pinLatitude = latitude
+		pinLongitude = longitude
 	}
-	
+
 
 	// console.log(event.target.classList.contains('rest-result'));
 	// console.log(event.target.getAttribute('data-latitude'));
 	// console.log(event.target.data.longitude);
 }
+
+
 
 //add event listener to rest result container
 //for function of the click event 
