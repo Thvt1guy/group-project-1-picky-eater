@@ -7,6 +7,10 @@ section h5:active {
     background-color: orangered;
 }
 
+section p{
+    text-align: center;
+}
+
 input{
     font-size: larger;
 }
@@ -32,7 +36,7 @@ header{
     border-style: solid;
     border-color: orangered;
     border-radius: 10px;
-    padding: 20px;
+    padding-left: 20px;
   }
 
 #map{
