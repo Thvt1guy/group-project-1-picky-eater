@@ -36,7 +36,6 @@ header{
     border-style: solid;
     border-color: orangered;
     border-radius: 10px;
-    padding-left: 20px;
   }
 
 #map{
@@ -52,6 +51,7 @@ header{
 }
 
 .image-container img {
+    height: 100%;
     width: 100%;
     background-color: white;
 }
@@ -61,4 +61,12 @@ header{
     border: solid;
     border-color: red;
     border-radius: 10px;
+}
+
+.rest-result{
+    padding: 1.5rem;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    text-align: center;
 }
