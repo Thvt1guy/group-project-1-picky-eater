@@ -62,3 +62,7 @@ header{
     border-color: red;
     border-radius: 10px;
 }
+
+.rest-result{
+    text-align: center;
+}
