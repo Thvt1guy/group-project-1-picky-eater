@@ -1,4 +1,5 @@
-# picky-eater
+# Picky Eater
+## Whats for Dinner?
 
 ## USER STORY
 As An indecisive eater
@@ -21,8 +22,9 @@ SO THAT I can order/retrieve my food
 - Must be deployed to GitHub Pages
 - Must be interactive (i.e: accept and respond to user input)
 - Must have 10 commits
-  ## Group Roles
-  - HTML/CSS - Samantha Cage 
-  - Restaurant API- Derrick Alcius
-  - Left side data- Anthony Pontecorvo 
-  - Google Maps API- Javed Nabira
+
+## Group Roles
+- HTML/CSS - Samantha Cage 
+- Restaurant API- Derrick Alcius
+- Google Maps API- Anthony Pontecorvo
+- Client Side Storage Integration- Nabira Javed
