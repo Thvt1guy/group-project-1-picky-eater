@@ -1,4 +1,5 @@
 # Picky Eater
+## -->[Link to the Deployed page](https://thvt1guy.github.io/group-project-1-picky-eater/)<--
 ## Whats for Dinner?
 
 ## USER STORY
@@ -28,3 +29,5 @@ SO THAT I can order/retrieve my food
 - Restaurant API- Derrick Alcius
 - Google Maps API- Anthony Pontecorvo
 - Client Side Storage Integration- Nabira Javed
+
+## -->[Presentation Link](https://docs.google.com/presentation/d/1REKH7CZO3CWEhp4uM1YEV7v0uoQ2TuwGRI-kqVk91lE/edit?usp=sharing)<--
